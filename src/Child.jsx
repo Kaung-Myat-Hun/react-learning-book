@@ -14,8 +14,9 @@ super(props)
 this.state= {
   count : 0
 }
+this.clickHandler = this.clickHandler.bind(this)
 }
-clickHandler = () => {
+clickHandler () {
   this.setState({
     count : this.state.count + 1
   })
