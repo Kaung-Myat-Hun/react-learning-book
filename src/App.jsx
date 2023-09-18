@@ -1,5 +1,6 @@
 import Child from "./Child"
 import Input from "./Input"
+import ListRendering from "./ListRendering"
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <Child name="Bate Thar"></Child>
       <Input></Input>
+      <ListRendering />
     </>
   )
 }
