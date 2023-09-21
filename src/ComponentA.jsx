@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ComponentB from './ComponentB'
+import UseEffectHook from './useEffectHook'
 
 class ComponentA extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class ComponentA extends Component {
   render() {
     return (
       <>
-        {this.state.show && <ComponentB />}
+        {this.state.show && <UseEffectHook />}
         <button onClick={this.showHandler}>Show</button>
       </>
     )

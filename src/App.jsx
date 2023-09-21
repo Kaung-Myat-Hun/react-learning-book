@@ -4,6 +4,7 @@ import ListRendering from "./ListRendering"
 import ConditionalRendering from "./ConditionalRendering"
 import Lifecycle from "./Lifecycle"
 import ComponentA from "./ComponentA"
+import UseEffectHook from "./useEffectHook"
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
       <ListRendering /> */}
       {/* <ConditionalRendering></ConditionalRendering> */}
       {/* <Lifecycle/> */}
-      <ComponentA />
+      {/* <ComponentA /> */}
+      <UseEffectHook />
     </>
   )
 }

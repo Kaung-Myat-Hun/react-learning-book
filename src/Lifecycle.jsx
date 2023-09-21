@@ -3,21 +3,27 @@ import React, { Component } from "react";
 class Lifecycle extends Component {
   constructor(props) {
     super(props)
-  
+    console.log("contructor start")
     this.state = {
-      count: 0
+      count: 0,
+      data : []
     }
   }
   getData = async () => {
     const data = await fetch("https://jsonplaceholder.typicode.com/users")
     const res = await data.json()
     console.log(res)
+    this.setState({
+      data: res
+    })
   }
   componentDidMount() {
-    this.getData();
     console.log("component life cycle start");
   }
-  componentDidUpdate(){
+  componentDidUpdate(prevProps , prevState){
+    if(prevState.count !== this.state.count){
+      this.getData();
+    }
     console.log("component state is update")
   }
   increaseHandler = () => {
@@ -26,13 +32,19 @@ class Lifecycle extends Component {
     })
   }
   render() {
+    console.log("render start")
     return (
       <>
         <h1>{this.state.count}</h1>
         <button onClick={this.increaseHandler}>Increase</button>
+        {this.state.data.map((item,index) =>(
+          <p key={index}>{item.name}</p>
+        ))}
       </>
     );
   }
 }
 
 export default Lifecycle;
+
+
