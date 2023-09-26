@@ -5,6 +5,11 @@ import ConditionalRendering from "./ConditionalRendering"
 import Lifecycle from "./Lifecycle"
 import ComponentA from "./ComponentA"
 import UseEffectHook from "./useEffectHook"
+import Component from "./component/Component"
+import { createContext } from "react"
+
+export const NameContext = createContext();
+export const AgeContext = createContext();
 
 function App() {
 
@@ -16,7 +21,12 @@ function App() {
       {/* <ConditionalRendering></ConditionalRendering> */}
       {/* <Lifecycle/> */}
       {/* <ComponentA /> */}
-      <UseEffectHook />
+      {/* <UseEffectHook /> */}
+      <NameContext.Provider value={"Bate Thar"}>
+        <AgeContext.Provider value={27}>
+          <Component />
+        </AgeContext.Provider>
+      </NameContext.Provider>
     </>
   )
 }

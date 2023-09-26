@@ -13,11 +13,11 @@ function UseEffectHook() {
     console.log(resdata)
   }
   useEffect(() => {
-    window.addEventListener("resize" , resizeHandler)
+    // window.addEventListener("resize" , resizeHandler)
     console.log("useEffect hook is start")
     getData() // ‌api side effect function 
     return() => {
-      window.removeEventListener("resize", resizeHandler)
+      // window.removeEventListener("resize", resizeHandler)
     }
   },[count])
   
