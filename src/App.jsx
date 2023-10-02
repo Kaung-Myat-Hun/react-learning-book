@@ -13,6 +13,7 @@ import Home from "./Home"
 import About from "./About"
 import Product from "./Product"
 import DynamicRoute from "./DynamicRoute"
+import UseRefHook from "./UseRefHook"
 import ChildProps from "./ChildProps"
 import { createContext } from "react"
 
@@ -50,8 +51,10 @@ function App() {
         Hello
         <p>Hello</p>
       </ChildProps> */}
+
+      <UseRefHook></UseRefHook>
       
-      <NavLink to="/">Home</NavLink>
+      {/* <NavLink to="/">Home</NavLink>
       <NavLink to="/about">About</NavLink>
       <NavLink to="/product">Product</NavLink>
 
@@ -62,7 +65,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/product" element={<Product />}></Route>
         <Route path="/product/:id" element={<DynamicRoute />}></Route>
-      </Routes>
+      </Routes> */}
     </>
   )
 }
