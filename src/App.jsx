@@ -8,6 +8,7 @@ import UseEffectHook from "./useEffectHook"
 import Component from "./component/Component"
 import ReducerHook from "./ReducerHook"
 import Styling from "./Styling"
+import Functional from "./Functional"
 import Home from "./Home"
 import About from "./About"
 import Product from "./Product"
@@ -43,6 +44,7 @@ function App() {
       </NameContext.Provider> */}
       {/* <ReducerHook></ReducerHook> */}
       {/* <Styling></Styling> */}
+      {/* <Functional></Functional> */}
 
       {/* <ChildProps>
         Hello
